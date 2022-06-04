@@ -1,4 +1,3 @@
-#!/bin/bash
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
@@ -10,6 +9,7 @@ int main(void)
 {
 		int n;
 		char last_digit;
+
 		srand(time(0));
 		n = rand() - RAND_MAX / 2;
 		last_digit = n % 10;
@@ -31,5 +31,4 @@ int main(void)
 			printf("Last digit of %d is %d and is 0\n", n, last_digit);
 		}
 		return (0);
-
 }
