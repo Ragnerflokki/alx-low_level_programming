@@ -1,3 +1,4 @@
+#!/bin/bash
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
@@ -30,4 +31,5 @@ int main(void)
 			printf("Last digit of %d is %d and is 0\n", n, last_digit);
 		}
 		return (0);
+
 }
