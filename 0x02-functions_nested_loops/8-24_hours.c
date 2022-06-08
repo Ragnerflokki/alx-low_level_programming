@@ -1,35 +1,32 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
-* jack_bauer - check the code
-* void: void argument
-* Return: VOID.
-*/
+ * jack_bauer - Prints the minutes of a day
+ *
+ * Return: no return
+ */
 void jack_bauer(void)
 {
+	int a, b, c, d;
 
-int hr, _hr, mt, _mt;
-
-for (hr = 0; hr <= 2; hr++)
-{
-_hr = 0;
-for (_hr = 0; _hr < 4; _hr++)
-{
-mt = 0;
-for (mt = 0; mt < 5; mt++)
-{
-_mt = 0;
-for (_mt = 0; _mt < 10; _mt++)
-{
-_putchar('0' + hr);
-_putchar('0' + _hr);
-_putchar(':');
-_putchar('0' + mt);
-_putchar('0' + _mt);
-_putchar('\n');
-}
-}
-}
-
-}
-
+	for (a = 48; a <= 50; a++)
+	{
+		for (b = 48; b <= 57; b++)
+		{
+			for (c = 48; c <= 53; c++)
+			{
+				for (d = 48; d <= 57; d++)
+				{
+					if (a >= 50 && b >= 52)
+						break;
+					_putchar(a);
+					_putchar(b);
+					_putchar(58);
+					_putchar(c);
+					_putchar(d);
+					_putchar('\n');
+				}
+			}
+		}
+	}
 }
