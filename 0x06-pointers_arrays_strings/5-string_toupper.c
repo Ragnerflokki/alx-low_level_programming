@@ -1,3 +1,4 @@
+#include <string.h>
 /**
  * string_toupper - it converts a string to all
  * uppercase
@@ -7,11 +8,14 @@
 
 char *string_toupper(char *str)
 {
-	while (*str != '\0')
+	int i = 0;
+	int len = (int) strlen(str);
+
+	while (i < len)
 	{
-		if (*str >= 97 && *str <= 122)
-			*str = *str - 32;
-		str++;
+		if (str[i] >= 97 && str[i] <= 122)
+			str[i] -= 32;
+		i++;
 	}
 	return (str);
 }
