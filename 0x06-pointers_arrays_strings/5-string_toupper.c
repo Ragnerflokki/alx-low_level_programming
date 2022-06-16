@@ -1,4 +1,3 @@
-
 /**
  * string_toupper - it converts a string to all
  * uppercase
