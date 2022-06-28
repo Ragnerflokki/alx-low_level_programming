@@ -1,31 +1,30 @@
-#include <string.h>
+#include "main.h"
+
 /**
- * _atoi -  Function to convert string to numbers
- * @s: string
- * Return: The number
+ * _atoi - Converts a string to an integer.
+ * @s: The string to be converted.
+ * Return: The integer value of the converted string.
  */
+
 int _atoi(char *s)
 {
-	unsigned int i, j, k, c, num, len, sign;
+	int sign = 1;
+	unsigned int num = 0;
 
-	len = (int) strlen(s);
-	if (len == 0)
-		return (0);
-	i = s[0] == 45 || s[0] == 43 ? 1 : 0;
-	sign = s[0] == 45 ? -1 : 1;
-	num = 0;
-	while (i < len)
-	{
-		j = (int) s[i];
-		c = j - 48;
-		if (c < 0 || c > 9)
+	do {
+		if (*s == '-')
+		{
+			sign *= -1;
+		}
+		else if (*s >= '0' && *s <= '9')
+		{
+			num = (num * 10) + (*s - '0');
+		}
+		else if (num > 0)
 		{
 			break;
 		}
-		num *= 10;
-		num += c;
-		i++;
-	}
-	num = num * sign;
-	return (num);
+	} while (*s++);
+
+	return (num * sign);
 }

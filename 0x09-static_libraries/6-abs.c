@@ -1,10 +1,21 @@
-#include <stdlib.h>
+#include "main.h"
+
 /**
- * _abs - returns the absolute value of a number
- * @n: The number to convert
- * Return: int the absolute value of n
+ * _abs - computes the absolute value of an integer.
+ *
+ * @n: is an integer
+ *
+ * Return: integer
  */
+
 int _abs(int n)
 {
-	return (abs(n));
+	if (n >= 0)
+	{
+		return (n);
+	}
+	else
+	{
+		return (-n);
+	}
 }
